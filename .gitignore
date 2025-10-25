@@ -1,2 +1,40 @@
+# build output
 bin/
 obj/
+**/bin/
+**/obj/
+
+# VS / Rider / Code
+.vs/
+.idea/
+.vscode/
+
+# user / cache / logs
+*.user
+*.suo
+*.userosscache
+*.swp
+*.tmp
+*.log
+logs/
+TestResults/
+coverage/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# packages / artifacts
+*.nupkg
+*.snupkg
+
+# local env / secrets (prefer dotnet user-secrets)
+.env
+.env.*
+secrets.json
+
+# database files (local only; remove if you actually commit these)
+*.mdf
+*.ldf
+*.sqlite
+*.db
