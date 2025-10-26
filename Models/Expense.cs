@@ -8,4 +8,7 @@ public sealed class Expense
     public decimal Amount { get; set; }
     public DateTime ExpenseDate { get; set; }
     public string? Notes { get; set; }
+
+    public int UserId { get; set; }
+    public AppUser User { get; set; } = null!;
 }

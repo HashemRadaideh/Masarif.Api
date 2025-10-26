@@ -15,12 +15,17 @@ services:
       interval: 10s
       timeout: 5s
       retries: 10
+  adminer:
+    image: adminer:latest
+    container_name: adminer_ui
+    restart: always
+    ports: [8080:8080]
   api:
     build: .
     environment:
-      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_URLS: http://+:6969
       ConnectionStrings__Default: Server=db,1433;Database=MasarifDb;User Id=sa;Password=P@ssw0rd12345!;TrustServerCertificate=True;
     depends_on:
       db:
         condition: service_healthy
-    ports: [8080:8080]
+    ports: [6969:6969]
